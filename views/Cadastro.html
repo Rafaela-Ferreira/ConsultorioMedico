@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Cadastros</h2>
+
+        <!-- Formulário para cadastrar Especialidade Médica -->
+        <div>
+            <h4>Cadastrar Especialidade Médica</h4>
+            <form action="/cadastrarEspecialidade" method="post">
+                <div class="form-group">
+                    <label for="especialidade">Especialidade:</label>
+                    <input type="text" class="form-control" id="especialidade" name="especialidade" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Formulário para cadastrar Médico -->
+        <div>
+            <h4>Cadastrar Médico</h4>
+            <form action="/cadastrarMedico" method="post">
+                <div class="form-group">
+                    <label for="nomeMedico">Nome do Médico:</label>
+                    <input type="text" class="form-control" id="nomeMedico" name="nomeMedico" required>
+                </div>
+                <div class="form-group">
+                    <label for="especialidadeMedica">Especialidade Médica:</label>
+                    <input type="text" class="form-control" id="especialidadeMedica" name="especialidadeMedica" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Formulário para cadastrar Paciente -->
+        <div>
+            <h4>Cadastrar Paciente</h4>
+            <form action="/cadastrarPaciente" method="post">
+                <div class="form-group">
+                    <label for="nomePaciente">Nome do Paciente:</label>
+                    <input type="text" class="form-control" id="nomePaciente" name="nomePaciente" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Formulário para cadastrar Tipo de Consulta -->
+        <div>
+            <h4>Cadastrar Tipo de Consulta</h4>
+            <form action="/cadastrarTipoConsulta" method="post">
+                <div class="form-group">
+                    <label for="tipoConsulta">Tipo de Consulta:</label>
+                    <input type="text" class="form-control" id="tipoConsulta" name="tipoConsulta" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Formulário para cadastrar Status da Consulta -->
+        <div>
+            <h4>Cadastrar Status da Consulta</h4>
+            <form action="/cadastrarStatusConsulta" method="post">
+                <div class="form-group">
+                    <label for="statusConsulta">Status da Consulta:</label>
+                    <input type="text" class="form-control" id="statusConsulta" name="statusConsulta" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Formulário para cadastrar Consulta Médica -->
+        <div>
+            <h4>Cadastrar Consulta Médica</h4>
+            <form action="/cadastrarConsulta" method="post">
+                <div class="form-group">
+                    <label for="dataConsulta">Data da Consulta:</label>
+                    <input type="date" class="form-control" id="dataConsulta" name="dataConsulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaConsulta">Hora da Consulta:</label>
+                    <input type="time" class="form-control" id="horaConsulta" name="horaConsulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="nomeMedicoConsulta">Nome do Médico:</label>
+                    <input type="text" class="form-control" id="nomeMedicoConsulta" name="nomeMedicoConsulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="nomePacienteConsulta">Nome do Paciente:</label>
+                    <input type="text" class="form-control" id="nomePacienteConsulta" name="nomePacienteConsulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipoConsultaConsulta">Tipo da Consulta:</label>
+                    <input type="text" class="form-control" id="tipoConsultaConsulta" name="tipoConsultaConsulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="statusConsultaConsulta">Status da Consulta:</label>
+                    <input type="text" class="form-control" id="statusConsultaConsulta" name="statusConsultaConsulta" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
