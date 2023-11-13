@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 40px;
+            background-color: whitesmoke;
+        }
+
+        .cadastro-container {
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .cadastro-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            width: 35%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-right: 2%;
+            margin-bottom: 10px;
+        }
+
+        .funcionarios-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .funcionarios-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .funcionarios-list th,
+        .funcionarios-list td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .funcionarios-list th {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 600px) {
+            .cadastro-container {
+                width: 90%;
+            }
+
+            .form-group button {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro de Consulta</h2>
+        <form>
+            <div class="form-group">
+                <label for="acesso">Acesso</label>
+                <input type="text" id="acesso" name="acesso" placeholder="Digite o acesso" required>
+            </div>
+            <div class="form-group">
+                <label for="especialidade">Especialidade Médica</label>
+                <select id="especialidade" name="especialidade">
+                    <option value="cardio">Cárdio</option>
+                    <option value="gastro">Gastro</option>
+                    <option value="clinico">Clínico Geral</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="medico">Médico</label>
+                <input type="text" id="medico" name="medico" placeholder="Digite o nome do médico" required>
+            </div>
+            <div class="form-group">
+                <label for="paciente">Paciente</label>
+                <input type="text" id="paciente" name="paciente" placeholder="Digite o nome do paciente" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo-consulta">Tipo da Consulta</label>
+                <select id="tipo-consulta" name="tipo-consulta">
+                    <option value="primeira-vez">Primeira Vez</option>
+                    <option value="paciente-frequente">Paciente Frequente</option>
+                    <option value="retorno">Retorno</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="status-consulta">Status da Consulta</label>
+                <select id="status-consulta" name="status-consulta">
+                    <option value="ativa">Ativa</option>
+                    <option value="cancelada">Cancelada</option>
+                    <option value="realizada">Realizada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="data-consulta">Data da Consulta</label>
+                <input type="date" id="data-consulta" name="data-consulta" required>
+            </div>
+            <div class="form-group">
+                <label for="hora-consulta">Hora da Consulta</label>
+                <input type="time" id="hora-consulta" name="hora-consulta" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Cadastrar Consulta</button>
+            </div>
+        </form>
+        <div class="funcionarios-list">
+            <h2>Lista de Consultas</h2>
+            <div class="form-group">
+                <button type="button" style="width: 30%;">Consultar</button>
+                <button type="button" style="width: 30%;">Editar</button>
+                <button type="button" style="width: 30%;">Excluir</button>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>João Silva</td>
+                    <td>Dra. Maria Oliveira</td>
+                    <td>2023-11-10</td>
+                    <td>15:30</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

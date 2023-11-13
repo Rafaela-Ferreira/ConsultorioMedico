@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 20px;
+            background-color: whitesmoke;
+            margin-top: 20px 0;
+        }
+
+        .cadastro-container {
+            width: 700px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .cadastro-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            width: 22%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-right: 2%;
+            margin-bottom: 10px;
+        }
+
+        .funcionarios-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .funcionarios-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .funcionarios-list th,
+        .funcionarios-list td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .funcionarios-list th {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 600px) {
+            .cadastro-container {
+                width: 80%;
+            }
+
+            .form-group button {
+                width: 100%;
+                margin-right: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro de Funcionário</h2>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <select id="cargo" name="cargo" required>
+                    <option value="medico">Médico</option>
+                    <option value="enfermeiro">Enfermeiro</option>
+                    <option value="recepcionista">Recepcionista</option>
+                    <option value="tecnicoLaboratorio">Técnico de Laboratório</option>
+                    <option value="administrativo">Administrativo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="especialidade">Especialidade:</label>
+                <select id="especialidade" name="especialidade" required>
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="dermatologia">Dermatologia</option>
+                    <option value="gastroenterologia">Gastroenterologia</option>
+                    <option value="neurologia">Neurologia</option>
+                    <option value="pediatria">Pediatria</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+        
+        <div class="funcionarios-list">
+            <h2>Lista de Funcionários</h2>
+            <div class="form-group">
+                <button type="button" >Consultar</button>
+                <button type="button" >Editar</button>
+                <button type="button" >Excluir</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Especialidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Desenvolvedor</td>
+                        <td>
+                            <select id="cadastro-Medicos" name="cadastro-Medicos">
+                                <option value="cardiologia">Cardiologia</option>
+                                <option value="gastroenterologia">Gastroenterologia</option>
+                                <option value="clinicoGeral">Clinico Geral</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
