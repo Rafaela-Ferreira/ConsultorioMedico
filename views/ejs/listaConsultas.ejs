@@ -97,7 +97,7 @@
 <body>
     <div class="cadastro-container">
         <h2>Cadastro de Consulta</h2>
-        <form>
+        <form action="/inserirConsulta" method="POST">
             <div class="form-group">
                 <label for="acesso">Acesso</label>
                 <input type="text" id="acesso" name="acesso" placeholder="Digite o acesso" required>
@@ -146,6 +146,8 @@
                 <button type="submit">Cadastrar Consulta</button>
             </div>
         </form>
+        
+
         <div class="funcionarios-list">
             <h2>Lista de Consultas</h2>
             <div class="form-group">
@@ -157,18 +159,44 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Paciente</th>
-                        <th>Médico</th>
+                        <th>Consulta</th>
                         <th>Data</th>
                         <th>Hora</th>
+                        <th>Médico</th>
+                        <th>Paciente</th>
+                        <th>Tipo Consulta</th>
+                        <th>Status Consulta</th>
                     </tr>
                 </thead>
+                <!--
                 <tbody>
-                    <td>João Silva</td>
-                    <td>Dra. Maria Oliveira</td>
-                    <td>2023-11-10</td>
-                    <td>15:30</td>
+                    <%  for (const consulta of consultas) { %>
+                        <tr>
+                            <td><%= consulta.ID_Consulta %></td>
+                            <td><%= consulta.Data %></td>
+                            <td><%= consulta.Hora %></td>
+                            <td><%= consulta.ID_Medico %></td>
+                            <td><%= consulta.ID_Paciente %></td>
+                            <td><%= consulta.ID_TipoConsulta %></td>
+                            <td><%= consulta.ID_StatusConsulta %></td>
+                        </tr>
+                    <% } %>
                 </tbody>
+                -->
+                <tbody>
+                    <% for (const consulta of consultas) { %>
+                        <tr>
+                            <td><%= consulta.ID_Consulta %></td>
+                            <td><%= consulta.Data %></td>
+                            <td><%= consulta.Hora %></td>
+                            <td><%= consulta.NomeMedico %></td>
+                            <td><%= consulta.NomePaciente %></td>
+                            <td><%= consulta.NomeTipoConsulta %></td>
+                            <td><%= consulta.NomeStatusConsulta %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+                
             </table>
         </div>
     </div>

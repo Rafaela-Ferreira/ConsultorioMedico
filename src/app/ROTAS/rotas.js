@@ -11,7 +11,9 @@ module.exports = (app) => {
     const consultaController = require("../CONTROLE/CON_consultorio");
     const conController = new consultaController();
 
-    
+    const consultaController = require("../CONTROLE/CON_consultorio");
+    const consultorioController = new consultaController();
+
 
     const especiController = require("../CONTROLE/CON_especialidade");
     const especialiController = new especiController();
@@ -29,11 +31,19 @@ module.exports = (app) => {
         res.send("Olá a console");
     });
 
-    app.get("/listaConsultasEJS", conController.exibeDadosConsultaEJS());
+    app.get("/listardadosConsultas", conController.exibeDadosConsultaEJS());
 
-    //app.get("/ExcluirConsultasEJS", ExclconController.excluirDadosConsultaEJS(idConsulta));
+    app.get("/listarConsultas", conController.listarDadosConsulta());
+
+   
+
+    app.post('/incluirConsulta', consultorioController.incluirConsulta);
+
+    app.post('/incluirConsulta', conController.incluirConsultaEJS());
 
 
+
+    
     app.get("/especialidade", especialiController.exibeDadosEspecialidadeEJS());
 
     app.get("/status", staController.dadosStatusConsultaEJS());

@@ -103,4 +103,23 @@ INSERT INTO Email (ID_Email, Email_Paciente, ID_Consulta) VALUES (1, 'paciente1@
 INSERT INTO Email (ID_Email, Email_Paciente, ID_Consulta) VALUES (2, 'paciente2@example.com', 2);
 
 
+--Tabela Consultas
+SELECT
+	c.ID_Consulta,
+	c.Data,
+	c.Hora,
+	m.Nome_Medico as NomeMedico,
+	p.Nome_Paciente as NomePaciente,
+	tc.Nome_TipoConsulta as NomeTipoConsulta,
+	sc.Nome_StatusConsulta as NomeStatusConsulta
+FROM
+    Consultas c
+    INNER JOIN Medicos m ON c.ID_Medico = m.ID_Medico
+    INNER JOIN Pacientes p ON c.ID_Paciente = p.ID_Paciente
+    INNER JOIN TiposConsulta tc ON c.ID_TipoConsulta = tc.ID_TipoConsulta
+    INNER JOIN StatusConsulta sc ON c.ID_StatusConsulta = sc.ID_StatusConsulta
+ORDER BY
+    c.ID_Consulta;
+
+
 
